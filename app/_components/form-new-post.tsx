@@ -1,13 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { createPost } from "../_actions/create-post";
 
 export function FormNewPost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
+  function handleSubmit(e: FormEvent) {
+    const post = { title, content };
+
+    createPost(e, post, () => {
+      setTitle("");
+      setContent("");
+    });
+  }
+
   return (
-    <form className="flex flex-col items-center gap-4">
+    <form className="flex flex-col items-center gap-4" onSubmit={handleSubmit}>
       <h1 className="font-bold text-xl">Adicione uma noticia</h1>
 
       <div className="flex flex-col w-11/12 max-w-md gap-2">
