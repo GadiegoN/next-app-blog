@@ -21,7 +21,7 @@ export default async function Home() {
           posts.map((post) => (
             <Link
               key={post.id}
-              href={`/post/${post.id}`}
+              href={`/posts/${post.id}`}
               className="hover:text-primary hover:border-primary border rounded-lg p-4"
             >
               {post.title}
