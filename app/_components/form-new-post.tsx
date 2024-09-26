@@ -14,7 +14,7 @@ export function FormNewPost() {
     createPost(e, post, () => {
       setTitle("");
       setContent("");
-      setContent("");
+      setSummary("");
     });
   }
 
