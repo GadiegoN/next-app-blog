@@ -1,19 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next App Blog
 
-## Getting Started
+Este é um projeto desenvolvido com [Next.js](https://nextjs.org/).
 
-First, run the development server:
+## Requisitos
+
+Antes de rodar o projeto localmente, você precisará ter os seguintes requisitos instalados:
+
+- [Node.js](https://nodejs.org/en/) (versão 18.x ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+## Como rodar o projeto localmente
+
+Siga os passos abaixo para rodar o projeto localmente em sua máquina.
+
+### 1. Clonar o repositório
+
+Clone este repositório usando o seguinte comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/GadiegoN/next-app-blog
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Acessar o diretório do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navegue até o diretório do projeto:
+
+```bash
+cd next-app-blog
+```
+
+### 3. Instalar dependências
+
+Instale as dependências do projeto usando `npm` ou `yarn`:
+
+```bash
+# Usando npm
+npm install
+
+# Usando yarn
+yarn install
+```
+
+### 4. Rodar o projeto em modo de desenvolvimento
+
+Para rodar o projeto em modo de desenvolvimento, execute o seguinte comando:
+
+```bash
+# Usando npm
+npm run dev
+
+# Usando yarn
+yarn dev
+```
+
+O projeto estará disponível no endereço `http://localhost:3000`.
+
+### 5. Rodar os testes
+
+Os testes configurados no projeto pode ser rodados com o seguinte comando:
+
+```bash
+# Usando npm
+npm test
+
+# Usando yarn
+yarn test
+```
+
+## Scripts Disponíveis
+
+`dev`: Inicia o servidor em modo de desenvolvimento.
+`build`: Compila o projeto para produção.
+`start`: Inicia o servidor de produção.
+`test`: Executa os testes configurados no projeto.
