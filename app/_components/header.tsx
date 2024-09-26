@@ -4,7 +4,9 @@ export function Header() {
   return (
     <header className="w-full flex shadow-lg">
       <div className="flex w-11/12 py-4 max-w-7xl mx-auto justify-between">
-        <h1>NextBlog</h1>
+        <h1 className="font-bold text-xl cursor-pointer select-none">
+          NextBlog
+        </h1>
 
         <nav>
           <ul className="flex gap-4">
