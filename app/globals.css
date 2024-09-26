@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #2b2c4b;
+  --foreground: #ededed;
+  --primary: #00d084;
 }
 
 body {
