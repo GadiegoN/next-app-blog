@@ -1,7 +1,9 @@
+import { FormNewPost } from "@/app/_components/form-new-post";
+
 export default function NewPost() {
   return (
-    <section>
-      <h1>Novo post</h1>
+    <section className="py-10">
+      <FormNewPost />
     </section>
   );
 }
