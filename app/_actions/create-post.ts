@@ -2,6 +2,7 @@ import { FormEvent } from "react"
 
 interface NewPostProps {
     title: string
+    summary: string
     content: string
 }
 

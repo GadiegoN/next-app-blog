@@ -5,13 +5,15 @@ import { createPost } from "../_actions/create-post";
 
 export function FormNewPost() {
   const [title, setTitle] = useState("");
+  const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
 
   function handleSubmit(e: FormEvent) {
-    const post = { title, content };
+    const post = { title, summary, content };
 
     createPost(e, post, () => {
       setTitle("");
+      setContent("");
       setContent("");
     });
   }
@@ -26,10 +28,25 @@ export function FormNewPost() {
         </label>
         <input
           type="text"
+          required
           id="title"
           placeholder="Digite o título"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          className="bg-background border border-primary rounded-lg ring-0 focus:ring-0 focus-visible:outline-none px-2 py-4"
+        />
+      </div>
+      <div className="flex flex-col w-11/12 max-w-md gap-2">
+        <label htmlFor="summary" className="text-md font-semibold">
+          Resumo
+        </label>
+        <input
+          type="text"
+          id="summary"
+          required
+          placeholder="Digite o resumo da noticia"
+          value={summary}
+          onChange={(e) => setSummary(e.target.value)}
           className="bg-background border border-primary rounded-lg ring-0 focus:ring-0 focus-visible:outline-none px-2 py-4"
         />
       </div>

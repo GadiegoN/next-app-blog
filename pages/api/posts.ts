@@ -21,7 +21,7 @@ export default function handler(request: NextApiRequest, response: NextApiRespon
     }
 
     if (request.method === 'POST') {
-        const { title, content } = request.body
+        const { title, summary, content } = request.body
 
         if (!title || !content) {
             return response.status(400).json({ error: "Title and news are required." })
@@ -30,6 +30,7 @@ export default function handler(request: NextApiRequest, response: NextApiRespon
         const newPost: PostProps = {
             id: (Date.now()).toString(),
             title,
+            summary,
             content,
             createAt: new Date(),
             author: 'Admin'
